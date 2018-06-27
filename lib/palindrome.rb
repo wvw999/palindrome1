@@ -18,3 +18,10 @@ class Word
     end
   end
 end
+
+puts "Check if your word is a palindrome"
+print "Enter a word: "
+palindrome_input = gets.chomp
+palindrome = Word.new(palindrome_input)
+puts palindrome.identify?()
+puts palindrome_input
