@@ -4,5 +4,8 @@ class Word
   end
 
   def identify?()
+    if @palindrome
+      true
+    end
   end
 end
