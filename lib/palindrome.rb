@@ -1,6 +1,6 @@
 class Word
   def initialize(word)
-    @palindrome = word
+    @palindrome = word.downcase.gsub(/ /i, '')
   end
 
   def identify?()
@@ -14,14 +14,15 @@ class Word
     if word_array.join("") == reversed_array.join("")
       return "equal!"
     else
+      puts "one \n#{word_array.join("")} \ntwo \n#{reversed_array.join("")}"
       return "not a palindrome"
     end
   end
 end
-
-puts "Check if your word is a palindrome"
-print "Enter a word: "
-palindrome_input = gets.chomp
-palindrome = Word.new(palindrome_input)
-puts palindrome.identify?()
-puts palindrome_input
+#
+# puts "Check if your word is a palindrome"
+# print "Enter a word: "
+# palindrome_input = gets.chomp
+# palindrome = Word.new(palindrome_input)
+# puts palindrome.identify?()
+# puts palindrome_input
